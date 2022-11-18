@@ -11,14 +11,23 @@ import '../index.css';
 export const App = () => {
   return (
     <div>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics title="Upload stats" stats={data} />
+      <div style={{
+        backgroundColor: "#e7ecf2",
+        padding: "50px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "50px"
+      }}>
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <Statistics title="Upload stats" stats={data} />
+      </div>
+      
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </div>
