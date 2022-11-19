@@ -11,13 +11,16 @@ import '../index.css';
 export const App = () => {
   return (
     <div>
-      <div style={{
-        backgroundColor: "#e7ecf2",
-        padding: "50px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "50px"
-      }}>
+      <div
+        style={{
+          alignItems: 'center',
+          backgroundColor: '#e7ecf2',
+          padding: '50px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '50px',
+        }}
+      >
         <Profile
           username={user.username}
           tag={user.tag}
@@ -27,9 +30,18 @@ export const App = () => {
         />
         <Statistics title="Upload stats" stats={data} />
       </div>
-      
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <div
+        style={{
+          alignItems: 'center',
+          padding: '50px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '50px',
+        }}
+      >
+        <FriendList friends={friends} />
+        <TransactionHistory items={transactions} />
+      </div>
     </div>
   );
 };
